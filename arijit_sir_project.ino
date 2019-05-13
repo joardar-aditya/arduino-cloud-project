@@ -7,10 +7,10 @@
 
 
 
-#define FIREBASE_HOST "first-arduino-ef1f4.firebaseio.com"
-#define FIREBASE_AUTH "gBhXw6xbjC1wxetf5dffcrQTsDgBUcr5oI6m47Up"
-#define WIFI_SSID "NEW OXYGEN"
-#define WIFI_PASSWORD "roadprime@8934"
+#define FIREBASE_HOST "project-id"
+#define FIREBASE_AUTH "db code"
+#define WIFI_SSID "wifi-ssid"
+#define WIFI_PASSWORD "wifi-password"
 
 
 void setup() {
@@ -39,7 +39,7 @@ void loop() {
   int sensorValue = analogRead(A0);
   float voltage = sensorValue*(5.0/1023.0);
   Serial.println(voltage);
-  Firebase.set("value", 1);
+  Firebase.set("value", voltage);
   
   delay(3000);
 
